@@ -59,6 +59,7 @@ function  makeLinkBlock(element,linkWrapper ){
     tagA.textContent = element.text;
     tagA.setAttribute('href', element.link);
     tagA.style = element.customStyle;
+    linksInnerWrapper.style = element.defaultButtonsStyle;
     linksInnerWrapper.append(tagA);
     linkWrapper.append(linksInnerWrapper);
 }
