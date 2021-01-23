@@ -23,7 +23,8 @@ function makeJson(url) {
 }
 
 function makingsUserBlock(setup, root) {
-    root.style = `${setup.pageBackgroundStyle}`;
+    const {pageBackgroundStyle, avatar} = setup;
+    root.style = `${pageBackgroundStyle}`;
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('user_wrapper');
 
@@ -32,8 +33,7 @@ function makingsUserBlock(setup, root) {
 
     const userAvatar = document.createElement('img');
     userAvatar.id = ('user_avatar');
-    userAvatar.setAttribute('src', setup.avatar);
-    userAvatar.style = "width: 100px;height: 100px";
+    userAvatar.setAttribute('src', avatar);
 
     linkWrapper.append(userAvatar);
     linkWrapper.append(userName);
@@ -50,13 +50,14 @@ function makingsLinkBlock(links, root) {
 }
 
 function  makeLinkBlock(element,linkWrapper ){
+    const {customStyle, defaultButtonsStyle} = element;
     const linksInnerWrapper = document.createElement('div');
     const tagA = document.createElement('a');
     linksInnerWrapper.classList.add('links_inner_wrapper');
     tagA.textContent = element.text;
     tagA.setAttribute('href', element.link);
-    tagA.style = element.customStyle;
-    linksInnerWrapper.style = element.defaultButtonsStyle;
+    tagA.style = customStyle;
+    linksInnerWrapper.style = defaultButtonsStyle;
     linksInnerWrapper.append(tagA);
     linkWrapper.append(linksInnerWrapper);
 }
