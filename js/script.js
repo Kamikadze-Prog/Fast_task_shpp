@@ -1,6 +1,5 @@
 "use strict";
-
-function DataTable(apiUrl, root) {
+function MakeSite(apiUrl, root) {
     makeUserLinkSite(apiUrl, root).then();
 }
 
@@ -9,7 +8,7 @@ async function makeUserLinkSite(apiUrl, root) {
     makingsUserBlock(data.setup, root);
     makingsLinkBlock(data.links, root);
 }
-
+/*Get data from api*/
 function makeJson(url) {
     return fetch(url)
         .then((response) => {
@@ -24,13 +23,11 @@ function makeJson(url) {
 }
 
 function makingsUserBlock(setup, root) {
-
     root.style = `${setup.pageBackgroundStyle}`;
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('user_wrapper');
 
     const userName = document.createElement('span');
-    userName.id = ('user_name');
     userName.textContent  = setup.username;
 
     const userAvatar = document.createElement('img');
@@ -66,4 +63,4 @@ function  makeLinkBlock(element,linkWrapper ){
 
 const url = 'https://lambda.shpp.me/multilink?page=kowo';
 const root = document.querySelector('#root');
-DataTable(url, root);
+MakeSite(url, root);
