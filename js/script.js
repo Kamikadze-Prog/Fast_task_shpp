@@ -24,7 +24,7 @@ function makeJson(url) {
 
 function makingsUserBlock(setup, root) {
     const {pageBackgroundStyle, avatar} = setup;
-    root.style = `${pageBackgroundStyle}`;
+    root.style = pageBackgroundStyle;
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('user_wrapper');
 
@@ -53,6 +53,7 @@ function  makeLinkBlock(element,linkWrapper ){
     const {customStyle, defaultButtonsStyle} = element;
     const linksInnerWrapper = document.createElement('div');
     const tagA = document.createElement('a');
+
     linksInnerWrapper.classList.add('links_inner_wrapper');
     tagA.textContent = element.text;
     tagA.setAttribute('href', element.link);

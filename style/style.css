@@ -26,13 +26,6 @@
     border-radius: 50%;
 }
 
-.links_inner_wrapper {
-    width: 92%;
-    height: 60px;
-    border: 2px solid rgb(255, 255, 255);
-    margin-bottom: 16px;
-}
-
 span {
     font-size: 25px;
     display: block;
@@ -45,6 +38,13 @@ span {
     justify-content: center;
     align-items: center;
     margin-top: 32px;
+}
+
+.links_inner_wrapper {
+    width: 92%;
+    height: 60px;
+    border: 2px solid rgb(255, 255, 255);
+    margin-bottom: 16px;
 }
 
 a, #root {
