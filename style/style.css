@@ -29,6 +29,7 @@ span {
     font-size: 25px;
     display: block;
     margin-top: 10px;
+    color: #0000009d;
 }
 
 .links_wrapper {
@@ -57,19 +58,20 @@ a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    transition: all 0.5s;
+    font-weight: 500;
     border: 2px solid rgb(255, 255, 255);
+    transition: all 0.25s;
 }
 
 a:hover {
     color: deepskyblue;
     background-color: white !important;
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 .links_inner_wrapper:hover {
     box-shadow: 0 0 10px 5px pink;
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.25s;
 }
 
 @media only screen and (min-width: 768px) {
