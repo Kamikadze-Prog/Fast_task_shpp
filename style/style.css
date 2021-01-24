@@ -8,7 +8,6 @@
     width: 100%;
     height: 100vh;
     background: linear-gradient(#e98aac, pink);
-    /*background-color: pink;*/
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -43,7 +42,6 @@ span {
 .links_inner_wrapper {
     width: 92%;
     height: 60px;
-    border: 2px solid rgb(255, 255, 255);
     margin-bottom: 16px;
 }
 
@@ -60,15 +58,16 @@ a {
     align-items: center;
     text-decoration: none;
     transition: all 0.5s;
+    border: 2px solid rgb(255, 255, 255);
 }
 
-a:hover{
+a:hover {
     color: deepskyblue;
     background-color: white !important;
     transition: all 0.5s;
 }
 
-.links_inner_wrapper:hover{
+.links_inner_wrapper:hover {
     box-shadow: 0 0 10px 5px pink;
     transition: box-shadow 0.5s;
 }

@@ -23,13 +23,13 @@ function makeJson(url) {
 }
 
 function makeUserBlock(setup, root) {
-    const {pageBackgroundStyle, avatar} = setup;
+    const {pageBackgroundStyle, avatar, username} = setup;
     root.style = pageBackgroundStyle;
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('user_wrapper');
 
     const userName = document.createElement('span');
-    userName.textContent  = setup.username;
+    userName.textContent = username;
 
     const userAvatar = document.createElement('img');
     userAvatar.id = ('user_avatar');
@@ -44,21 +44,20 @@ function makeLinkBlock(links, root) {
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('links_wrapper');
     links.forEach(element => {
-        makeLink(element,linkWrapper );
+        makeLink(element, linkWrapper);
     });
     root.append(linkWrapper);
 }
 
-function  makeLink(element,linkWrapper ){
-    const {customStyle, defaultButtonsStyle} = element;
+function makeLink(element, linkWrapper) {
+    const {customStyle, defaultButtonsStyle , link, text} = element;
     const linksInnerWrapper = document.createElement('div');
     const tagA = document.createElement('a');
-
     linksInnerWrapper.classList.add('links_inner_wrapper');
-    tagA.textContent = element.text.charAt(0).toUpperCase() + element.text.slice(1); // change 1 letter to uppercase
-    tagA.setAttribute('href', element.link);
+    tagA.textContent = text.charAt(0).toUpperCase() + text.slice(1); // change 1 letter to uppercase
+    tagA.setAttribute('href', link);
     tagA.setAttribute('target', 'blank');
-    tagA.style = customStyle;
+    tagA.style = customStyle ? customStyle : defaultButtonsStyle;
     linksInnerWrapper.style = defaultButtonsStyle;
     linksInnerWrapper.append(tagA);
     linkWrapper.append(linksInnerWrapper);

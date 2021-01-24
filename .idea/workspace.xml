@@ -4,6 +4,7 @@
     <list default="true" id="e125db06-7d9a-41e8-b328-3bbde1ee71f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +22,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ShppProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -43,7 +44,10 @@
       <workItem from="1611216281418" duration="598000" />
       <workItem from="1611402012816" duration="2340000" />
       <workItem from="1611424733329" duration="1065000" />
-      <workItem from="1611477031712" duration="781000" />
+      <workItem from="1611477031712" duration="872000" />
+      <workItem from="1611487428414" duration="21000" />
+      <workItem from="1611496450423" duration="22000" />
+      <workItem from="1611506391750" duration="762000" />
     </task>
     <servers />
   </component>
@@ -51,10 +55,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="965" y="436" key="FileChooserDialogImpl" timestamp="1611052818334">
+    <state x="965" y="436" key="FileChooserDialogImpl" timestamp="1611496471180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="965" y="436" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611052818334" />
+    <state x="965" y="436" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611496471180" />
     <state x="76" y="141" width="1410" height="600" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611048625025">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
