@@ -1,12 +1,12 @@
 "use strict";
-function MakeSite(apiUrl, root) {
-    makeUserLinkSite(apiUrl, root).then();
+function makeSite(apiUrl, root) {
+    makeUserSite(apiUrl, root).then();
 }
 
-async function makeUserLinkSite(apiUrl, root) {
+async function makeUserSite(apiUrl, root) {
     const data = await makeJson(apiUrl)
-    makingsUserBlock(data.setup, root);
-    makingsLinkBlock(data.links, root);
+    makeUserBlock(data.setup, root);
+    makeLinkBlock(data.links, root);
 }
 /*Get data from api*/
 function makeJson(url) {
@@ -22,7 +22,7 @@ function makeJson(url) {
         });
 }
 
-function makingsUserBlock(setup, root) {
+function makeUserBlock(setup, root) {
     const {pageBackgroundStyle, avatar} = setup;
     root.style = pageBackgroundStyle;
     const linkWrapper = document.createElement('div');
@@ -40,23 +40,24 @@ function makingsUserBlock(setup, root) {
     root.append(linkWrapper);
 }
 
-function makingsLinkBlock(links, root) {
+function makeLinkBlock(links, root) {
     const linkWrapper = document.createElement('div');
     linkWrapper.classList.add('links_wrapper');
     links.forEach(element => {
-        makeLinkBlock(element,linkWrapper );
+        makeLink(element,linkWrapper );
     });
     root.append(linkWrapper);
 }
 
-function  makeLinkBlock(element,linkWrapper ){
+function  makeLink(element,linkWrapper ){
     const {customStyle, defaultButtonsStyle} = element;
     const linksInnerWrapper = document.createElement('div');
     const tagA = document.createElement('a');
 
     linksInnerWrapper.classList.add('links_inner_wrapper');
-    tagA.textContent = element.text;
+    tagA.textContent = element.text.charAt(0).toUpperCase() + element.text.slice(1); // change 1 letter to uppercase
     tagA.setAttribute('href', element.link);
+    tagA.setAttribute('target', 'blank');
     tagA.style = customStyle;
     linksInnerWrapper.style = defaultButtonsStyle;
     linksInnerWrapper.append(tagA);
@@ -65,4 +66,4 @@ function  makeLinkBlock(element,linkWrapper ){
 
 const url = 'https://lambda.shpp.me/multilink?page=kowo';
 const root = document.querySelector('#root');
-MakeSite(url, root);
+makeSite(url, root);
